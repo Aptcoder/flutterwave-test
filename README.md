@@ -6,4 +6,4 @@ Backend repo for classBoard project
 * Add remote : git remote add [name] [repo link]
 * pull repo: git pull
 * Install packages: npm install (node >v12 is required)
-* start dev: npm run dev (nodemon is required)
+* start dev: npm run dev (nodemon is required)"# flutterwave-test" 
