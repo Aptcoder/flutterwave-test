@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Product-Mafia/classBoard-BE.git"
+    "url": ""
   },
   "author": "Product-Mafia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Product-Mafia/classBoard-BE/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/Product-Mafia/classBoard-BE#readme",
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",

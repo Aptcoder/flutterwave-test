@@ -1,9 +1,9 @@
-// const { listen } = require("../app");
+const logger = require('./logger');
 
 class APIError extends Error {
 /**
  * @constructor
- * @param {integer} statusCode - status code for the api response
+ * @param {Number} statusCode - status code for the api response
  * @param {string} message - error message
  */
   constructor(statusCode, message) {
@@ -14,16 +14,18 @@ class APIError extends Error {
 }
 
 const handleError = (res, err) => {
-  // if invalid json pay
+  // if invalid json payload
   if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
     return res.status(400).send({
       message: 'Invalid JSON payload passed.',
       status: 'error',
       data: null
-    }); // Bad request
+    });
   }
+  // unexpected error
   const statusCode = err.statusCode || 500;
   const message = err.message || 'Something unexpected went wrong.';
+  logger.error(err);
   return res.status(statusCode).send({
     message,
     status: 'error',
