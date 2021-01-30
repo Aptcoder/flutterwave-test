@@ -13,7 +13,7 @@ module.exports = (() => {
       // are rule and data presesnt
       if (!rule || !data) {
         const field = rule ? 'data' : 'rule';
-        throw new APIError(400, `${field} is required`);
+        throw new APIError(400, `${field} is required.`);
       }
 
       // is rule valid object
